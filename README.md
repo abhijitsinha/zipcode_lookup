@@ -22,7 +22,7 @@ Or install it yourself as:
 
     $ ZipcodeLookup.fetch_details(zip)
 
-    The code lookups to Ziptastic API to fetch details, if fails or does not retrieve details - it lookups google api. On successful lookup, a geoobject with city, state, country and county is returned.
+The code lookups to Ziptastic API to fetch details, if fails or does not retrieve details - it lookups google api. On successful lookup, a geoobject with city, state, country and county is returned.
 
 TODO: Error Handling, Sanitize and Validate the zipcode before process.
 
