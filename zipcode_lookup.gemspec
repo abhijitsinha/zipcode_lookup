@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Gem to fetch geo details via zipcode}
   spec.description   = %q{This gem uses the ziptastic api and google api to fetch the geo details via zipcode}
-  spec.homepage      = "http://www.abhijitsinha.me"
+  spec.homepage      = "https://github.com/abhijitsinha/zipcode_lookup"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
