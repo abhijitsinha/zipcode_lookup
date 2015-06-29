@@ -1,0 +1,122 @@
+results:
+  - address_components:
+    - long_name: '400080'
+      short_name: '400080'
+      types:
+      - postal_code
+    - long_name: Dadukou
+      short_name: Dadukou
+      types:
+      - sublocality_level_1
+      - sublocality
+      - political
+    - long_name: Chongqing
+      short_name: Chongqing
+      types:
+      - locality
+      - political
+    - long_name: Chongqing
+      short_name: Chongqing
+      types:
+      - administrative_area_level_1
+      - political
+    - long_name: China
+      short_name: CN
+      types:
+      - country
+      - political
+    formatted_address: Dadukou, Chongqing, China, 400080
+    geometry:
+      bounds:
+        northeast:
+          lat: 29.4891132
+          lng: 106.4832893
+        southwest:
+          lat: 29.4763451
+          lng: 106.4641459
+      location:
+        lat: 29.4829688
+        lng: 106.4677761
+      location_type: APPROXIMATE
+      viewport:
+        northeast:
+          lat: 29.4891132
+          lng: 106.4759262
+        southwest:
+          lat: 29.4763451
+          lng: 106.4641459
+  - address_components:
+    - long_name: '400080'
+      short_name: '400080'
+      types:
+      - postal_code
+    - long_name: Volgograd Oblast
+      short_name: Volgograd Oblast
+      types:
+      - administrative_area_level_1
+      - political
+    - long_name: Russia
+      short_name: RU
+      types:
+      - country
+      - political
+    formatted_address: Volgograd Oblast, Russia, 400080
+    geometry:
+      bounds:
+        northeast:
+          lat: 48.51623499999999
+          lng: 44.63020299999999
+        southwest:
+          lat: 48.452749
+          lng: 44.5611371
+      location:
+        lat: 48.4835347
+        lng: 44.5956279
+      location_type: APPROXIMATE
+      viewport:
+        northeast:
+          lat: 48.51623499999999
+          lng: 44.63020299999999
+        southwest:
+          lat: 48.452749
+          lng: 44.5611371
+  - address_components:
+    - long_name: '400080'
+      short_name: '400080'
+      types:
+      - postal_code
+    - long_name: Mumbai
+      short_name: Mumbai
+      types:
+      - locality
+      - political
+    - long_name: Maharashtra
+      short_name: MH
+      types:
+      - administrative_area_level_1
+      - political
+    - long_name: India
+      short_name: IN
+      types:
+      - country
+      - political
+    formatted_address: Mumbai, Maharashtra 400080, India
+    geometry:
+      bounds:
+        northeast:
+          lat: 19.1880055
+          lng: 72.9684505
+        southwest:
+          lat: 19.1481144
+          lng: 72.93377439999999
+      location:
+        lat: 19.1720804
+        lng: 72.948255
+      location_type: APPROXIMATE
+      viewport:
+        northeast:
+          lat: 19.1880055
+          lng: 72.9684505
+        southwest:
+          lat: 19.1481144
+          lng: 72.93377439999999
