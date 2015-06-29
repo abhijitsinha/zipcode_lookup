@@ -1,18 +1,18 @@
-# ZipcodeLookup
+# Zipcode Lookup
 
-Welcome to zipcode lookup. This gem fetches geo-details via zipcode lookup. It uses couple of API - Google and Ziptastic for fetching geo-details.
+Welcome to zipcode lookup. The gem retrieves geo-details from a valid zipcode. To retrieve the geo-details gem is configured to lookup Ziptastic and Google Map API.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'zipcode_lookup'
+gem 'zipcode_lookup', '~> 0.1.0'
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -20,9 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
+###### [Ziptastic API](https://github.com/joshstrange/Ziptastic) 
+
     $ ZipcodeLookup.fetch_details(zip)
 
-The code lookups to Ziptastic API to fetch details, if fails or does not retrieve details - it lookups google api. On successful lookup, a geoobject with city, state, country and county is returned.
+The code lookups to Ziptastic API to fetch details, if it fails or does not retrieve details - it lookups Google API. On successful lookup, a geo-object with city, state, country and county(if found) is returned.
+
+###### Google API
+
+Google being more accurate and support more regions but it is chosen as secondary due to limited API calls available. You can use region_key(Region Biasing) to search or lookup more precisely.
+
+##### Reason why this gem is created - 
+
+1. Our application uses Master Table of ZipCodes, and we do lookup using that table.
+2. But it was very difficult to accomodate all zips, thats why we created this gem to lookup zips which are not present in our database.
 
 TODO: Error Handling, Sanitize and Validate the zipcode before process.
 
