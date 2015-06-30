@@ -24,10 +24,7 @@ module Lookup
     end
 
     def process
-      begin
-        self.response = api_request
-      rescue
-      end
+      self.response = api_request
     end
   end
 end

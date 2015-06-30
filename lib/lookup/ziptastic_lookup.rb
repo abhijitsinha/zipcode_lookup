@@ -3,7 +3,7 @@ require 'lookup/base'
 module Lookup
   class ZiptasticLookup < Base
     def search_url
-      "http://ziptasticapi.com/#{zipcode}"
+      "http://zip.getziptastic.com/v2/US/#{zipcode}"
     end
 
     def process

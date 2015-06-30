@@ -12,7 +12,7 @@ describe Lookup::ZiptasticLookup do
     end
 
     it '#search_url' do
-      expect(@google_lookup.search_url).to eq("http://ziptasticapi.com/#{@zip}")
+      expect(@google_lookup.search_url).to eq("http://zip.getziptastic.com/v2/US/#{@zip}")
     end
 
     describe '#zipcode process' do
