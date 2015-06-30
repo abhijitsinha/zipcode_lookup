@@ -1,6 +1,8 @@
-# Zipcode Lookup
+# Zipcode Lookup 
 
 Zipcode lookup retrieves geo-details from a valid zipcode. The gem is configured to lookup Ziptastic and Google Map API to fetch geo-details.
+
+[<img src='https://travis-ci.org/abhijitsinha/zipcode_lookup.svg?branch=master'>](https://travis-ci.org/abhijitsinha/zipcode_lookup)
 
 ## Installation
 
