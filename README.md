@@ -1,6 +1,6 @@
 # Zipcode Lookup 
 
-Zipcode lookup retrieves geo-details from a valid zipcode. The gem is configured to lookup Ziptastic and Google Map API to fetch geo-details.
+Zipcode lookup retrieves geo-details via a valid zipcode. The gem is configured to lookup Ziptastic and Google Map API to fetch geo-details.
 
 [<img src='https://travis-ci.org/abhijitsinha/zipcode_lookup.svg?branch=master'>](https://travis-ci.org/abhijitsinha/zipcode_lookup)
 [![Code Climate](https://codeclimate.com/github/abhijitsinha/zipcode_lookup/badges/gpa.svg)](https://codeclimate.com/github/abhijitsinha/zipcode_lookup)
@@ -24,26 +24,35 @@ Or install it yourself as:
 
 ## Usage
 
-###### [Ziptastic API](https://github.com/joshstrange/Ziptastic) 
+###### [Ziptastic API](https://www.getziptastic.com/) 
 
     $ ZipcodeLookup.fetch_details(zip)
 
-The code lookups to Ziptastic API to fetch details, if it fails or does not retrieve details - it lookups Google API. On successful lookup, a geo-object with city, state, country and county(if found) is returned.
+The code lookups to Ziptastic API to fetch geo details, if it fails or does not retrieve details - it lookups Google API. On successful lookup, a geo-object with city, state, country and county(if found) is returned. Currently we are using V1 version of the Ziptastic API. WIP to add V2.
 
 ###### Google API
 
-Google being more accurate and support more regions but still chosen as secondary due to limited API calls available. You can use region_key(Region Biasing) to search or lookup more precisely.
+    $ ZipcodeLookup.fetch_details(zip, region_key: 'IN')
+
+As Ziptastic V1 only supports US region, Google API has been added as a backup, as it provides more details and support more regions. You can use region_key(Region Biasing) to search or lookup more precisely.
 
 ##### Reason why this gem is created - 
 
 1. Our application uses Master Table of ZipCodes, and we do lookup using that table.
-2. But it was very difficult to accomodate all zips, thats why we created this gem to lookup zips which are not present in our database.
+2. But it was very difficult to accomodate all zips, thats why created this gem to lookup zips which are not present in our database.
 
 TODO: 
+
 1. Error Handling.
+
 2. Sanitize and Validate the zipcode before process.
+
 3. Include more details from Ziptastic.
+
 4. Performance Evaluation.
+
+5. Ziptastic V2 and V3.
+
 
 ## Development
 
