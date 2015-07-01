@@ -5,7 +5,8 @@ require 'json'
 
 module Lookup
   class Base
-    attr_accessor :geo_obj, :response, :response_obj, :zipcode
+    attr_accessor :api_key, :geo_obj, :region, :response,
+      :response_obj, :zipcode
 
     def self.process(zipcode, options = {})
       new(zipcode, options).process
@@ -17,6 +18,8 @@ module Lookup
 
     def initialize(zipcode, options = {})
       @zipcode = zipcode
+      @api_key = options[:api_key]
+      @region  = options[:region]
     end
 
     def parsed_url

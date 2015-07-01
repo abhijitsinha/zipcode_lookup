@@ -16,7 +16,7 @@ describe ZipcodeLookup do
     end
 
     it 'returns the zip from google' do
-      ziptastic_hash = {"error"=>"Zip cant be found."}
+      ziptastic_hash = {}
       allow_any_instance_of(Lookup::ZiptasticLookup).to receive(:api_request).and_return(ziptastic_hash.to_json)
 
       response = double('google', {country: 'India'})

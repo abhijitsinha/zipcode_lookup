@@ -3,7 +3,8 @@ require 'lookup/base'
 module Lookup
   class ZiptasticLookup < Base
     def search_url
-      "http://zip.getziptastic.com/v2/US/#{zipcode}"
+      self.region ||= 'US'
+      "http://zip.getziptastic.com/v2/#{region}/#{zipcode}"
     end
 
     def process
@@ -17,6 +18,7 @@ module Lookup
     end
 
     def build_geo_details
+      return nil if response.empty?
       OpenStruct.new(response)
     end
   end

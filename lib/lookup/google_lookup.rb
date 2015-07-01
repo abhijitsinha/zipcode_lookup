@@ -2,20 +2,12 @@ require 'lookup/base'
 
 module Lookup
   class GoogleLookup < Base
-    attr_accessor :api_key, :region
-
     GEO_HASH = {
       'city'     => 'locality',
       'state'    => 'administrative_area_level_1',
       'county'   => 'administrative_area_level_2',
       'country'  => 'country'
     }
-
-    def initialize(zipcode, options = {})
-      super
-      @api_key = options[:api_key]
-      @region  = options[:region]
-    end
 
     def search_url
       "http://maps.googleapis.com/maps/api/geocode/json?address=#{zipcode}&region=#{region}&key=#{api_key}"
