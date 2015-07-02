@@ -4,15 +4,23 @@ describe Lookup::ZiptasticLookup do
   describe 'Instance methods' do
     before :all do
       @zip = '94158'
-      @google_lookup = described_class.new(@zip)
+      @ziptastic_lookup = described_class.new(@zip)
     end
 
     it 'returns the zip' do
-      expect(@google_lookup.zipcode).to eq(@zip)
+      expect(@ziptastic_lookup.zipcode).to eq(@zip)
+    end
+
+    it 'returns the region key' do
+      expect(@ziptastic_lookup.get_region).to eq('US')
+    end
+
+    it 'returns the parsed url' do
+      expect(@ziptastic_lookup.parsed_url.class).to eq(URI::HTTP)
     end
 
     it '#search_url' do
-      expect(@google_lookup.search_url).to eq("http://zip.getziptastic.com/v2/US/#{@zip}")
+      expect(@ziptastic_lookup.search_url).to eq("http://zip.getziptastic.com/v2/US/#{@zip}")
     end
 
     describe '#zipcode process' do

@@ -16,6 +16,10 @@ describe Lookup::GoogleLookup do
       expect(@google_lookup.zipcode).to eq(@zip)
     end
 
+    it 'returns the parsed url' do
+      expect(@google_lookup.parsed_url.class).to eq(URI::HTTP)
+    end
+
     it '#search_url' do
       expect(@google_lookup.search_url).to eq("http://maps.googleapis.com/maps/api/geocode/json?address=#{@zip}&region=&key=")
     end

@@ -9,20 +9,6 @@ module Lookup
       'country'  => 'country'
     }
 
-    def search_url
-      "http://maps.googleapis.com/maps/api/geocode/json?address=#{zipcode}&region=#{region}&key=#{api_key}"
-    end
-
-    def process
-      super
-      fetch_response
-      build_geo_details
-    end
-
-    def fetch_response
-      self.response = JSON.parse(response)['results'].first
-    end
-
     def build_geo_details
       self.response_obj = OpenStruct.new(response)
       self.geo_obj      = OpenStruct.new
@@ -36,6 +22,20 @@ module Lookup
     def fetch_address_component(component_name)
       component_name = response_obj.address_components.find { |x| x['types'].include?(component_name) }
       component_name and component_name['long_name']
+    end
+
+    def fetch_response
+      self.response = JSON.parse(response)['results'].first
+    end
+
+    def process
+      super
+      fetch_response
+      build_geo_details
+    end
+
+    def search_url
+      "http://maps.googleapis.com/maps/api/geocode/json?address=#{zipcode}&region=#{region}&key=#{api_key}"
     end
   end
 end
