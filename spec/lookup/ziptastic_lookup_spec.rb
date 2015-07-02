@@ -29,6 +29,11 @@ describe Lookup::ZiptasticLookup do
         allow_any_instance_of(described_class).to receive(:api_request).and_return(ziptastic_hash.to_json)
       end
 
+      it '#api_request' do
+        ziptastic_lookup = described_class.new('94158')
+        expect(ziptastic_lookup.api_request).to eq("{\"city\":\"Mumbai\",\"state\":\"Maharastra\",\"country\":\"India\"}")
+      end
+
       it 'nil geo_details on empty response from ziptastic' do
         ziptastic_lookup = described_class.new('94158')
         ziptastic_lookup.response = "{}"
