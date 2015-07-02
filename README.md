@@ -2,7 +2,6 @@
 
 [<img src='https://travis-ci.org/abhijitsinha/zipcode_lookup.svg?branch=master'>](https://travis-ci.org/abhijitsinha/zipcode_lookup)
 [![Code Climate](https://codeclimate.com/github/abhijitsinha/zipcode_lookup/badges/gpa.svg)](https://codeclimate.com/github/abhijitsinha/zipcode_lookup)
-[![Test Coverage](https://codeclimate.com/github/abhijitsinha/zipcode_lookup/badges/coverage.svg)](https://codeclimate.com/github/abhijitsinha/zipcode_lookup/coverage)
 
 Zipcode lookup retrieves geo-details via a valid zipcode. The gem is configured to lookup Ziptastic and Google Map API to fetch geo-details.
 
