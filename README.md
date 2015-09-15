@@ -32,7 +32,7 @@ The code lookups to Ziptastic API to fetch geo details, if it fails or does not 
 
 ###### Google API
 
-    $ ZipcodeLookup.fetch_details(zip, region_key: 'IN')
+    $ ZipcodeLookup.fetch_details(zip, region: 'IN')
 
 As Ziptastic V1 only supports US region, Google API has been added as a backup, as it provides more details and support more regions. You can use region_key(Region Biasing) to search or lookup more precisely.
 
@@ -40,6 +40,12 @@ As Ziptastic V1 only supports US region, Google API has been added as a backup, 
 
 1. Our application uses Master Table of ZipCodes, and we do lookup using that table.
 2. But it was very difficult to accomodate all zips, thats why created this gem to lookup zips which are not present in our database.
+
+Updates - 
+
+The Ziptastic version 2 is incorporated which now handles more regions, use master branch for using Ziptastic Version 2.
+
+ZipcodeLookup.fetch_details(zip, region: 'IN')
 
 TODO: 
 
@@ -51,7 +57,7 @@ TODO:
 
 4. Performance Evaluation.
 
-5. Ziptastic V2 and V3.
+5. Ziptastic V3.
 
 
 ## Development
