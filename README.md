@@ -41,13 +41,13 @@ As Ziptastic V1 only supports US region, Google API has been added as a backup, 
 1. Our application uses Master Table of ZipCodes, and we do lookup using that table.
 2. But it was very difficult to accomodate all zips, thats why created this gem to lookup zips which are not present in our database.
 
-Updates - 
+#### Updates - 
 
 The Ziptastic version 2 is incorporated which now handles more regions, use master branch for using Ziptastic Version 2.
 
 ZipcodeLookup.fetch_details(zip, region: 'IN')
 
-TODO: 
+#### TODO: 
 
 1. Error Handling.
 
